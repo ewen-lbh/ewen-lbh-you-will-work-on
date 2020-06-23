@@ -2,7 +2,7 @@
 
 PROJECTS_DIRECTORY = "/mnt/d/projects"
 ARCHIVED_PROJECTS_DIRECTORY = "/mnt/d/projects/.archived"
-# This will be executed with one position argument, the chosen project's directory.
+# This will be executed with one positional argument, the chosen project's directory.
 CODE_EDITOR_COMMAND = "code"
 
 from typing import *
