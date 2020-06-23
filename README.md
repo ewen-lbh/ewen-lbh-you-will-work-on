@@ -16,7 +16,7 @@ Then edit the script to input your own settings, see the three constants at the 
 ```python
 PROJECTS_DIRECTORY = "/mnt/d/projects" # <---- Where all of your projects are
 ARCHIVED_PROJECTS_DIRECTORY = "/mnt/d/projects/.archived" # <----- Where all of your _archived_ projects are
-# This will be executed with one position argument, the chosen project's directory.
+# This will be executed with one positional argument, the chosen project's directory.
 CODE_EDITOR_COMMAND = "code"
 ```
 
