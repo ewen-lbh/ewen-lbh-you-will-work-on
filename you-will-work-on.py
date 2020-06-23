@@ -32,15 +32,19 @@ while True:
         i_dont_want_to += [selected]
         print("- No? Oh-okay, well...")
     elif ans.startswith("delete"):
-        if input("- You sure?\n- ").strip().lower() == "yes":
-            print("- M'kay")
-            rmtree(selected)
+        if input("- You sure?\n- ").strip().lower().startswith('y'):
+            print(f"- M'kay! Everyone, say goodbye to {selected}!")
+            print(f"- Goodbyyyyyyyyye")
+            rmtree(path.join(PROJECTS_DIRECTORY, selected))
+            print(f"Narrator: user-kun didn't realize its mistake, {selected!r} would make the rest of his life a nightmare")
+            i_dont_want_to += [selected]
         else:
             print("- Thought so.")
     elif ans.startswith("archive"):
-        print("- Okay, moving this project to .archived/")
+        print("- Okay, I'll archive it.")
         rename(path.join(PROJECTS_DIRECTORY, selected), path.join(ARCHIVED_PROJECTS_DIRECTORY, selected))
+        i_dont_want_to += [selected]
     else:
-        run(["code", abspath(selected)], shell=True)
+        run(f'code "{path.join(PROJECTS_DIRECTORY, selected)}"', shell=True)
         break
     no_dash_next = True
