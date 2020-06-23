@@ -39,7 +39,7 @@ while True:
             print("- Thought so.")
     elif ans.startswith("archive"):
         print("- Okay, moving this project to .archived/")
-        rename(path.join(PROJECTS_DIRECTORY, selected), path.join(ARCHIVED_PROJECTS_DIRECTORY, selectd))
+        rename(path.join(PROJECTS_DIRECTORY, selected), path.join(ARCHIVED_PROJECTS_DIRECTORY, selected))
     else:
         run(["code", abspath(selected)], shell=True)
         break
